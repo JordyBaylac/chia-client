@@ -66,11 +66,11 @@ export interface NetworkOverrides {
 }
 
 export interface Config {
-  mainnet: MainnetOrTestnet0;
-  testnet0: MainnetOrTestnet0;
+  mainnet: NetworkConfig;
+  testnet0: NetworkConfig;
 }
 
-export interface MainnetOrTestnet0 {
+export interface NetworkConfig {
   address_prefix: string;
 }
 

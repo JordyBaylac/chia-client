@@ -9,10 +9,7 @@ let chiaRootPath: string = "";
 export const getChiaRootPath = (): string => {
   if (chiaRootPath) return chiaRootPath;
 
-  chiaRootPath = resolve(
-    homedir(),
-    process.env["CHIA_ROOT"] || ".chia/mainnet"
-  );
+  chiaRootPath = resolve(homedir(), process.env["CHIA_ROOT"] || ".chia/mainnet");
 
   return chiaRootPath;
 };

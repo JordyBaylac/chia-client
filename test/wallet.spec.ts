@@ -36,9 +36,7 @@ describe("Wallet", () => {
         })
         .reply(200, "success");
 
-      expect(await wallet.logInAndRestore(123, "/root/yolo")).toEqual(
-        "success"
-      );
+      expect(await wallet.logInAndRestore(123, "/root/yolo")).toEqual("success");
     });
 
     it("calls log_in with type=skip", async () => {
@@ -165,9 +163,7 @@ describe("Wallet", () => {
         })
         .reply(200, { transaction: "success" });
 
-      expect(
-        await wallet.getTransaction("fakeWalletId", "fakeTransactionId")
-      ).toEqual("success");
+      expect(await wallet.getTransaction("fakeWalletId", "fakeTransactionId")).toEqual("success");
     });
 
     it("calls get_transactions", async () => {
@@ -199,9 +195,7 @@ describe("Wallet", () => {
         })
         .reply(200, { transaction: "success" });
 
-      expect(
-        await wallet.sendTransaction("fakeWalletId", 9, "fakeAddress", 1)
-      ).toEqual("success");
+      expect(await wallet.sendTransaction("fakeWalletId", 9, "fakeAddress", 1)).toEqual("success");
     });
 
     it("calls create_backup", async () => {
